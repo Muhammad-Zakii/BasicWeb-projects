@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Animated Page</title>
+</head>
+<style>
+	.div1{
+		position:fixed;
+		left:0px;
+		right:0px;
+		top:0px;
+		bottom:0px;
+		width:100%;
+		height:100%;
+		animation-name:bg;
+		animation-duration:5s;
+		animation-iteration-count:infinite;
+	}
+	@keyframes bg{
+		0%{
+			background-color:black;
+		}
+		50%{
+			background-color:green;
+		}
+		100%{
+			background-color:yellow;
+		}
+	}
+	.ba{
+		width:100px;
+		height:100px;
+		position:relative;
+		border-radius:50%;
+		background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+		margin:50px;
+		animation-name:mo;
+		animation-duration:3s;
+		animation-iteration-count:infinite;
+	}
+	@keyframes mo{
+		0%{
+			top:0px;
+		}
+		50%{
+			top:300px;
+		}
+		100%{
+			top:0px;
+		}
+
+	}
+	#ba1{
+		left:150px;
+	}
+	#ba2{
+     left:700px;
+	}
+	.hea{
+		
+		position:relative;
+		animation-name:mon;
+		animation-duration:3s;
+		animation-iteration-count:infinite;
+	}
+	@keyframes mon{
+		0%{
+			left:0px;
+			color:skyblue;
+		}
+		50%{
+			left:500px;
+			color:darkblue;
+		}
+		100%{
+			left:1600px;
+			color:gainsboro;
+		}
+
+	}
+</style>
+<body>
+<div class="div1">
+	<h1 class="hea">Hello to the animation page.</h1>
+</div>
+<div class="ba" id="ba1">	
+</div>
+<div class="ba" id="ba2"></div>
+</body>
+</html>
