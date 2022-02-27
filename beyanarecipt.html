@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahoo Motors</title>
+    <style>
+        body{
+            text-align:center;
+            background-color: black;
+            color: azure;
+        }
+        input[type="text"]
+{
+background-color:black;
+color: white;
+padding: auto;
+margin:20px;
+width:90%;
+}
+    </style>
+</head>
+<body>
+    <h1>Beyana recipt of Bahoo Motors</h1>
+    <form action="" onsubmit ="return false">
+        <input type="text" name="beyana" id="beyana" placeholder="Enter beyana"><br>
+        <input type="text" name="modelnameandyear" id="modelnameandyear" placeholder="Enter model and year"><br>
+        <input type="text" name="registrationNum" id="registrationNum" placeholder="Enter registration number"><br>
+        <input type="text" name="totalpayment" id="totalpayment" placeholder="Enter total payment"><br>
+        <input type="text" name="recivedby" id="recivedby" placeholder="Enter the name who fill beyana recept"><br>
+        <button onclick="info()">Submit</button>
+    </form>
+    <h2>Here the information about the purchasing of a vehicle.</h2>
+    <h3 id="be"></h3>
+    <h3 id="my"></h3>
+    <h3 id="reg"></h3>
+    <h3 id="total"></h3>
+    <h3 id="rem"></h3>
+    <h3 id="recived"></h3>
+    <script>
+       function info(){
+        var beyana=document.querySelector('#beyana').value;
+        var modelnameandyear=document.querySelector('#modelnameandyear').value;
+        var registrationNum=document.querySelector('#registrationNum').value;
+        var totalpayment=document.querySelector('#totalpayment').value;
+        var remaining=totalpayment - beyana;
+        var recivedby=document.querySelector('#recivedby').value;
+        // var beyana=document.querySelector('#beyana').value;
+        // var modelnameandyear=document.querySelector('#modelnameandyear').value;
+        // var registrationNum=document.querySelector('#registrationNum').value;
+        // var totalpayment=document.querySelector('#totalpayment').value;
+        // var recivedby=document.querySelector('#recivedby').value;
+        document.querySelector('#be').innerHTML=`Beyana is ${beyana}`;
+        document.querySelector('#my').innerHTML=`Model name and year is ${modelnameandyear}`;
+        document.querySelector('#reg').innerHTML=`Registration Number is ${registrationNum}`;
+        document.querySelector('#total').innerHTML=`Total Payment is ${totalpayment}`;
+        document.querySelector('#rem').innerHTML=`Remaining balance is ${remaining}`;
+        document.querySelector('#recived').innerHTML=`Recived by ${recivedby}`;
+        };
+    </script>
+    
+</body>
+</html>
